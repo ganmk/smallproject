@@ -1,0 +1,12 @@
+/* pages/detail/detail.wxss */
+
+.weui-cell__bd
+{
+  background-color: orangered;
+
+}
+
+.weui-cell__ft
+{
+   background-color: palegreen;
+}

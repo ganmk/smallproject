@@ -1,0 +1,14 @@
+<!--pages/detail/detail.wxml-->
+ 
+     <view class="common-list" >
+      <block wx:for="{{pageData}}">
+  <view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">{{item.title}}</view>
+                <view class="weui-cell__ft">{{item.author_name}}</view>
+                 <label class="label-2__text" for="{{item.name}}"><text>{{item.date}}</text></label>
+                <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{item.thumbnail_pic_s}}"></image>         
+            </view>
+        </view>
+</block> </view>

@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<scroll-view scroll-y="true" style="height:{{scrollHeight}}px"
+  bindscrolltolower="scrollLowerEvent">
+   
+    <view class="common-list">
+    
+      <block wx:for="{{pageData}}">
+          <navigator url="/detail/detail?id={{item.name}}"  data-bid="{{item.name}}" class="weui-grid"   bindtap="toListPage"          hover-class="weui-grid_active">
+              <view class="weui-grid__label">{{item.text}}</view>
+          </navigator>
+
+          
+      </block>
+
+    </view>
+  </scroll-view>
+
+  <checkbox-group bindchange="checkboxChange">
+  <label class="checkbox" wx:for="{{pageData}}">
+    <checkbox value="{{item.value}}" checked="{{item.text}}"/>{{item.text}}
+  </label>
+</checkbox-group>
+
+<view class="body-view">
+    <switch checked  />
+    <switch  />
+</view>
+
+<view class="section">
+  <textarea placeholder="placeholder颜色是红色的" placeholder-style="color:red;"  />
+</view>
+
+
+<view class="btn-area">
+  <navigator url="www.baidu.com" hover-class="navigator-hover">跳转到新页面</navigator>
+  <navigator url="../../redirect/redirect/redirect?title=redirect" open-type="redirect" hover-class="other-navigator-hover">在当前页打开</navigator>
+  <navigator url="/page/index/index" open-type="switchTab" hover-class="other-navigator-hover">切换 Tab</navigator>
+</view>
+
+<view style="text-align:center">test </view>
+<view> 点击左上角返回回到上级页面 </view>
+<contact-button 
+  type="default-light" 
+  size="20"
+  session-from="weapp"
+>
+</contact-button>
